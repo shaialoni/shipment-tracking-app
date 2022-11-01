@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-class Destination {
+export class Destination {
   receiver: string;
   location: {
     lat: number;

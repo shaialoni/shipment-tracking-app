@@ -1,9 +1,8 @@
-const createDiv = function () {
-    const div = document.createElement('div')
-    const statement = document.createTextNode('Cargo Tracking App')
-    div.append(statement)
+import { Destination } from "./Destination";
+import { Cargo } from "./Cargo";
 
-    document.body.appendChild(div)
-}
+const destination = new Destination()
+console.log(destination)
 
-createDiv()
+const cargo = new Cargo()
+console.log(cargo)
