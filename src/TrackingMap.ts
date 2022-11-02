@@ -1,5 +1,9 @@
-import { Destination } from "./Destination"
-import { Cargo } from "./Cargo"
+interface Entity {
+    location: {
+        lat: number;
+        lon: number;
+    }
+}
 
 export class TrackingMap {
     private googleMap: google.maps.Map
@@ -14,12 +18,12 @@ export class TrackingMap {
         })
     }
 
-    attachMarker(entity: Destination | Cargo): void {
+    attachMarker(entity: Entity): void {
         new google.maps.Marker({
             map: this.googleMap,
             position: {
                 lat: entity.location.lat,
-                lng: entity.location.lon
+                lng: entity.location.lon,
             }
         })
     }
