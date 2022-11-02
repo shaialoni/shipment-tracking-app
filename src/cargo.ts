@@ -14,4 +14,8 @@ export class Cargo {
       lon: +faker.address.latitude(),
     };
   }
+  
+  popupText(): string {
+    return `<h3>Tracking ID: ${this.trackingId}</h3>`
+  }
 }
